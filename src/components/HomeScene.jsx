@@ -85,11 +85,14 @@ export default function HomeScene() {
 
   return (
     <Scene>
+      <Entity primitive='a-assets'>
+          <video id="cube" autoPlay loop={true} src="../public/cube.mp4"></video>
+        </Entity>
       <Entity primitive='a-camera' position="0 40 -0" rotation="90 0 0" ref={cameraRef}
         wasd-controls={{ enabled: false }}
         look-controls={{ enabled: false }} />
       <Entity>
-        <Entity primitive='a-video' src="../public/newTest.mp4" position="0 50 0" rotation="-90 0 0"/>
+        <Entity primitive='a-video' src="#cube" position="0 50 0" rotation="90 0 0"/>
         <Entity primitive='a-light' type="point" intensity='10' color="#445451" position="0.9683026062919912 50 -0.176770114444802"/>
         <Entity primitive='a-light' type="ambient" intensity='10' color="#445451" position="0.9683026062919912 0 -0.176770114444802"/>
           <a-sky color="#a5ff44"></a-sky>

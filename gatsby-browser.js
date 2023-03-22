@@ -11,7 +11,6 @@
  *
  * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-ssr/
  */
-// import { GatsbySSR } from 'gatsby'
 // import React from 'react'
 // import { Helmet } from 'react-helmet'
 // import 'aframe'
