@@ -11,21 +11,21 @@
  *
  * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-ssr/
  */
-// import React from 'react'
-// import { Helmet } from 'react-helmet'
-// import 'aframe'
-// import { Scene } from 'aframe-react'
-// import 'aframe-environment-component'
+import React from 'react'
+import { Helmet } from 'react-helmet'
+import 'aframe'
+import { Scene } from 'aframe-react'
+import 'aframe-environment-component'
 
-// const wrapRootElement = ({ element }) => (
-//   <>
-//     <Helmet>
-//       <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
-//     </Helmet>
-//     <Scene>{element}</Scene>
-//   </>
-// )
+const wrapRootElement = ({ element }) => (
+  <>
+    <Helmet>
+      <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
+    </Helmet>
+    <Scene>{element}</Scene>
+  </>
+)
 
-// export const onRenderBody = ({ setHtmlAttributes }) => {
-//   setHtmlAttributes({ lang: `en` })
-// }
+export const onRenderBody = ({ setHtmlAttributes }) => {
+  setHtmlAttributes({ lang: `en` })
+}

@@ -4,7 +4,7 @@ import Seo from "../components/seo"
 import loadable from "@loadable/component";
 import { Suspense } from "react";
 
-const Main = loadable(() => import("../Components/HomeScene"))
+const Main = loadable(() => import("../components/HomeScene"))
 
 
 
