@@ -3,7 +3,10 @@
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "@devcrvft",
+  "engines": {
+    "node": "18.x"
+  },
   "dependencies": {
     "@loadable/component": "^5.15.3",
     "aframe": "^1.4.1",
