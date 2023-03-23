@@ -1,6 +1,7 @@
 import React, { useRef, useLayoutEffect } from 'react';
 import { Entity, Scene } from 'aframe-react';
 import anime from 'animejs';
+import video from '../videos/Obey.webm';
 
 const Sphere = ({ color, position, rotation, id }) => {
   const ref = useRef(null);
@@ -86,7 +87,7 @@ export default function HomeScene() {
   return (
     <Scene>
       <Entity primitive='a-assets'>
-          <video id="cube" autoPlay loop={true} src="../public/cube.mp4"></video>
+          <video id="cube" autoPlay loop={true} src={video} timeout="9000"></video>
         </Entity>
       <Entity primitive='a-camera' position="0 40 -0" rotation="90 0 0" ref={cameraRef}
         wasd-controls={{ enabled: false }}

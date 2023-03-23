@@ -11,9 +11,9 @@
  *
  * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-ssr/
  */
+import 'aframe'
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import 'aframe'
 import { Scene } from 'aframe-react'
 import 'aframe-environment-component'
 

@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import HeaderImage from "../images/aframe.png";
 
 const Header = ({ siteTitle }) => (
   <header
@@ -24,7 +25,7 @@ const Header = ({ siteTitle }) => (
       alt="Gatsby logo"
       height={20}
       style={{ margin: 0 }}
-      src='../images/aframe.png'
+      src={HeaderImage}
     />
   </header>
 )
