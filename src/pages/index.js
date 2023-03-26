@@ -11,13 +11,11 @@ const Main = loadable(() => import("../components/HomeScene"))
 
 
 const IndexPage = () => (
-  <Layout>
      <div>
       <Suspense fallback={<div>Loading...</div>}>
         <Main userInteractionEnabled={false}/>
       </Suspense>
     </div>
-  </Layout>
 )
 
 /**

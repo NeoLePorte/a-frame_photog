@@ -7,7 +7,7 @@
 
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-
+import VideoProvider from "./VideoProvider"
 import Header from "./header"
 import "./layout.css"
 
@@ -24,6 +24,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
+    
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div
         style={{

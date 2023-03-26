@@ -43,9 +43,36 @@ body {
   margin: 0;
   word-wrap: break-word;
 }
+/* animate #world border to spin and change colors randomly */
+  
+
+
+@keyframes spin {
+  0% {
+    border-color: #ff13c8;
+  }
+  25% {
+    border-color: #92ff33;
+  }
+  50% {
+    border-color: #b3ff2f;
+  }
+  75% {
+    border-color: #ff13c8;
+  }
+  100% {
+    border-color: #ff13c8;
+  }
+}
+#world {
+  border: 5px solid #7026b9;
+  border-radius: 100%;
+  animation: spin 10s linear infinite;
+}
 .a-canvas {
   z-index: -20;
 }
+
 a {
   background-color: transparent;
   color: var(--color-primary);

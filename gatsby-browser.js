@@ -14,17 +14,16 @@
 import 'aframe'
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import { Scene } from 'aframe-react'
 import 'aframe-environment-component'
+import { VideoProvider } from "./src/components/VideoProvider";
+import Layout from "./src/components/layout"
 
-const wrapRootElement = ({ element }) => (
-  <>
-    <Helmet>
-      <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
-    </Helmet>
-    <Scene>{element}</Scene>
-  </>
-)
+export const wrapPageElement = ({ element, props }) => {
+  return (
+    <VideoProvider><Layout >{element}</Layout></VideoProvider>
+      
+  )
+}
 
 export const onRenderBody = ({ setHtmlAttributes }) => {
   setHtmlAttributes({ lang: `en` })

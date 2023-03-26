@@ -1,33 +1,60 @@
-import * as React from "react"
+import React, { useContext } from "react"
 import { Link } from "gatsby"
-import HeaderImage from "../images/aframe.png";
+import HeaderImage from "../gifs/glitch.gif"
+import SpiralGif from "../gifs/world.gif"
+import { VideoContext } from "./VideoProvider"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      margin: `0 auto`,
-      padding: `var(--space-4) var(--size-gutter)`,
-      display: `flex`,
-      alignItems: `center`,
-      justifyContent: `space-between`,
-    }}
-  >
-    <Link
-      to="/"
+
+
+
+const Header = () => {
+  const { isPlaying, playVideo, pauseVideo } = useContext(VideoContext)
+  
+
+  const handlePlayClick = () => {
+    if (!isPlaying) {
+      playVideo()
+      console.log('play')
+    } else {
+    pauseVideo()
+    }
+    
+  }
+
+  return (
+    <header
       style={{
-        fontSize: `var(--font-sm)`,
-        textDecoration: `none`,
+        margin: `0 auto`,
+        padding: `var(--space-4) var(--size-gutter)`,
+        display: `flex`,
+        alignItems: `center`,
+        justifyContent: `space-between`,
       }}
     >
-      {siteTitle}
-    </Link>
-    <img
-      alt="Gatsby logo"
-      height={20}
-      style={{ margin: 0 }}
-      src={HeaderImage}
-    />
-  </header>
-)
+      <Link
+        to="/"
+        style={{
+          fontSize: `var(--font-sm)`,
+          textDecoration: `none`,
+        }}
+      >
+        <img
+          alt="Gatsby logo"
+          height={100}
+          style={{ margin: 0 }}
+          src={HeaderImage}
+        />
+      </Link>
+      <button onClick={handlePlayClick}>Play</button>
+      <img
+        id="world"
+        alt="Gatsby logo"
+        height={100}
+        style={{ margin: 0 }}
+        src={SpiralGif}
+      />
+    </header>
+  )
+}
 
 export default Header

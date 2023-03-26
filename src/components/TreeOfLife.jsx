@@ -5,7 +5,7 @@ import anime from 'animejs';
 const Sphere = ({ color, position, id }) => {
     const ref = useRef(null);
   
-    useEffect(() => {
+    useLayoutEffect(() => {
       if (ref.current) {
         anime({
           targets: ref.current.el.object3D.position,
@@ -87,7 +87,7 @@ export default function HomeScene() {
   return (
     <Scene userInteractionEnabled={false}>
         <Entity
-          light={{ type: 'point', color: color, intensity: 3 }}
+          light={{ type: 'point', color: 'white', intensity: 3 }}
           primitive='a-point-light'
           position='0 0 0'
         />
