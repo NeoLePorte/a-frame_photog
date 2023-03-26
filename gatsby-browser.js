@@ -13,7 +13,6 @@
  */
 import 'aframe'
 import React from 'react'
-import { Helmet } from 'react-helmet'
 import 'aframe-environment-component'
 import { VideoProvider } from "./src/components/VideoProvider";
 import Layout from "./src/components/layout"

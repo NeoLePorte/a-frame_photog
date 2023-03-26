@@ -1,6 +1,5 @@
 import React, { useRef, useLayoutEffect, useContext, useEffect } from 'react';
 import { Entity, Scene } from 'aframe-react';
-import { GifMaterial } from "./gif-material.js";
 import anime from 'animejs';
 import video from '../videos/eyes.webm';
 import SkyImage from "../images/Sky.jpg";
@@ -9,6 +8,7 @@ import { VideoContext } from './VideoProvider';
 
 const Sphere = ({ color, position, rotation, id }) => {
   const ref = useRef(null);
+  
 
   useLayoutEffect(() => {
     if (ref.current) {

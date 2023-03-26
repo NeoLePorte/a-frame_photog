@@ -7,7 +7,6 @@
 
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import VideoProvider from "./VideoProvider"
 import Header from "./header"
 import "./layout.css"
 
