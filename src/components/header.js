@@ -3,41 +3,38 @@ import { Link } from "gatsby"
 import HeaderImage from "../gifs/glitch.gif"
 import SpiralGif from "../gifs/world.gif"
 import { VideoContext } from "./VideoProvider"
-import anime from 'animejs';
-import './header.css';
-
-
+import anime from "animejs"
+import "./header.css"
 
 const Header = () => {
   const { isPlaying, playVideo, pauseVideo } = useContext(VideoContext)
-  const playButtonRef = useRef(null);
+  const playButtonRef = useRef(null)
 
   const handleButtonHover = () => {
     anime({
       targets: playButtonRef.current,
       scale: 1.2,
       duration: 300,
-      easing: 'easeInOutQuad',
-    });
-  };
-  
+      easing: "easeInOutQuad",
+    })
+  }
+
   const handleButtonLeave = () => {
     anime({
       targets: playButtonRef.current,
       scale: 1,
       duration: 300,
-      easing: 'easeInOutQuad',
-    });
-  };
-  
+      easing: "easeInOutQuad",
+    })
+  }
 
   const handlePlayClick = () => {
     if (!isPlaying) {
-      playVideo();
+      playVideo()
     } else {
-      pauseVideo();
+      pauseVideo()
     }
-  
+
     anime({
       targets: playButtonRef.current,
       backgroundColor: [
@@ -50,9 +47,9 @@ const Header = () => {
         { value: "#00ff008a", duration: 2000 },
       ],
       easing: "easeInOutQuad",
-      loop: true
-    });
-  };
+      loop: true,
+    })
+  }
 
   return (
     <header
@@ -86,9 +83,15 @@ const Header = () => {
         onMouseEnter={handleButtonHover}
         onMouseLeave={handleButtonLeave}
       >
-        Push to
-        Awaken
+        Push to Awaken
       </button>
+      <Link
+        to="https://github.com/NeoLePorte/a-frame_photog"
+        style={{
+          fontSize: `var(--font-sm)`,
+          textDecoration: `none`,
+        }}
+      >
       <img
         id="world"
         alt="Gatsby logo"
@@ -96,6 +99,7 @@ const Header = () => {
         style={{ margin: 0 }}
         src={SpiralGif}
       />
+      </Link>
     </header>
   )
 }

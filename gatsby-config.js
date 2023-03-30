@@ -15,7 +15,7 @@ module.exports = {
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   flags: {
-    DEV_SSR: true
+    DEV_SSR: true,
   },
   plugins: [
     `gatsby-plugin-netlify`,

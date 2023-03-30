@@ -1,21 +1,22 @@
 .play-button {
-    background-color: #ff00d062;
-    border: none;
-    color: rgb(255, 151, 23);
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    outline: none;
-    transition: background-color 0.3s;
-  }
-  
-  .play-button:hover {
-    background-color: #ff77ff8a;
-  }
+  background-color: #ff00d062;
+  border: none;
+  color: rgb(255, 151, 23);
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  outline: none;
+  transition: background-color 0.3s;
+}
 
-  #glitch, #world {
-    opacity: 0.5;
-  }
+.play-button:hover {
+  background-color: #ff77ff8a;
+}
+
+#glitch,
+#world {
+  opacity: 0.5;
+}
