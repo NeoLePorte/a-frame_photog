@@ -1,4 +1,4 @@
-# Gatsby Aframe Anime.js Art App
+# Barbelith Awakens
 
 This is a web application built with Gatsby, Aframe and Anime.js that showcases an interactive art scene. The scene features a Fibonacci spiral of spheres that move in a spring-like motion, and a rotating video of eyes that appears in the center. The scene also features a moving camera that goes up and down, and a glitchy sky.
 
